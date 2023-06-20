@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid container navbar__both">
+            <div class="navbar__logo">
+                <a href="">
+                    <img src="images/ae_logo.svg" alt="logo">
+                </a>
+            </div>
+            <button class="navbar-toggler bg-white" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse navbar__menu" id="navbarSupportedContent">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link " href="#">How it works</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Examples</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Reviews</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Blog</a>
+                    </li>
+                    <li class="nav-item mr-25">
+                        <a class="nav-link" href="#">Homework Answers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><Button class="navbar__button">Submit</Button></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fa-solid fa-user navbar__icon"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <section>
+            <div class="container">
+                <div class="signinform ">
+                    <h1 class="text-center">
+                        Sign in
+                    </h1>
+                    <div class="signinform__filled">
+                        <form action="">
+                            <div class="col-lg-12">
+                                <input class="width-100 mt-3" type="text" placeholder="Email">
+                            </div>
+                            <div class="col-lg-12">
+                                <input class="width-100 mt-3 mb-3" type="password" placeholder="Password">
+                            </div>
+                        </form>
+                        <a href="">
+                            Forgot password?
+                        </a>
+                        <div class="signinform__filled__flex">
+                            <div>
+                                <button>Sign in</button>
+                            </div>
+                            <div>
+                                <p>
+                                    Don't have an account?
+                                </p>
+                                <a href="">
+                                    Sign up & Submit
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <h2>
+                        Forgot your login?
+                    </h2>
+                    <p>
+                        If you forgot the email address you used to sign up, please contact us. Let us know your name,
+                        the ID and the title of one of your orders. We will look for your account and send you the login
+                        in a reply in the following format: ***eone@website.com
+                    </p>
+                </div>
+            </div>
+            </div>
+        </section>
+    </main>
+    <footer class="mt-5">
+        <div class="firstfooter">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-5 firstfooter__disflex">
+                        <img src="images/footerimg.svg" alt="">
+                        <p>We deliver excellent assignment help to customers from the USA, UK, Canada, and worldwide.
+                        </p>
+                    </div>
+                    <div class="col-lg-7">
+                        <ul>
+                            <li class="active"><a href="">Home</a></li>
+                            <li><a href="">How it works</a></li>
+                            <li><a href="">Submit</a></li>
+                            <li><a href="">Homework Answers</a></li>
+                            <li><a href="">Blog</a></li>
+                            <li><a href="">Contact us</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="secondfooter">
+            <div class="container">
+                <div class="col-lg-12">
+                    <div class="row">
+                        <div class="col-lg-5">
+                            <p>© 2023 BrainRouter LTD. All rights reserved.</p>
+                        </div>
+                        <div class="col-lg-7">
+                            <ul>
+                                <li class="active"><a href="">Terms and Conditions</a></li>
+                                <li><a href="">Privacy policy</a></li>
+                                <li><a href="">Cookie Policy</a></li>
+                                <li><a href="">Money back</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+
+    <script>
+        function handleDrop(event) {
+            event.preventDefault();
+            var files = event.dataTransfer.files;
+            document.getElementById('fileInput').files = files;
+            handleFiles(files);
+        }
+
+        function handleFiles(files) {
+            var fileNames = [];
+            for (var i = 0; i < files.length; i++) {
+                var file = files[i];
+                fileNames.push(file.name);
+            }
+            document.getElementById('selectedFiles').value = fileNames.join(', ');
+        }
+    </script>
+
+</body>
+
+</html>

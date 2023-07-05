@@ -15,7 +15,7 @@ ul{
     top: 0;
     z-index: 999;}
 .container{
-    max-width: 1100px !important;
+    max-width: 1200px !important;
     margin: 0 auto;
 }
 .navbar__logo > a > img{
@@ -40,7 +40,7 @@ ul{
 .mr-25{
     margin-right: 25px;
 }
-.navbar__button, .banner__info > button, .signinform__filled button {
+.navbar__button, .banner__info > button, .signinform__filled button, .content__bott button {
     font-weight: normal;
     font-size: 13px;
     line-height: 16px;
@@ -50,7 +50,7 @@ ul{
     border: 1px solid rgb(239, 83, 102);
     color: rgb(255, 255, 255);
 }
-.navbar__button:hover, .banner__info > button:hover, .signinform__filled button:hover, .account__body button:hover{
+.navbar__button:hover, .banner__info > button:hover, .signinform__filled button:hover, .account__body button:hover, .content__bott button:hover{
     color: red;
     background: white;
     transition: 0.5s;
@@ -185,28 +185,12 @@ ul{
 }
 
 .content__bott button{
-    display: inline-block;
-    background: radial-gradient(ellipse at center top,#EEDC22 0%,#D66B24 110%);
-    border-radius: 3px!important;
-    box-shadow: 0 4px 7px rgba(0,0,0,.16);
-    border: 1px solid #B25145;
-    cursor: pointer;
-    color: #fff;
-    text-decoration: none;
-    text-align: center;
-    vertical-align: middle;
     padding: 8px 11px 6px 11px;
     font-weight: 700;
     font-size: 15px;
     text-transform: uppercase;
-    text-shadow: -1px -1px 0 rgba(0,0,0,.45), 1px -1px 0 rgba(0,0,0,.45), -1px 1px 0 rgba(0,0,0,.45), 1px 1px 0 rgba(0,0,0,.45);
-    white-space: nowrap;
 }
-.content__bott button:hover{   
-    border-color: #C34B40;
-    color: #fff;
-    background: radial-gradient(ellipse at center top,#F2AC1B 0%,#DF521C 110%);
-}
+
 .right__same{
     margin-bottom: 24px;
     padding: 12px 16px;
@@ -404,7 +388,7 @@ ul{
 .container-simform-works, .container-simform-works2 {
     max-width: 1220px;
     margin: 0px auto;
-    padding: 60px 0px;
+    padding: 60px;
 }
 #bottom-footer .social-icon {
     display: flex;
@@ -439,7 +423,7 @@ ul{
     text-decoration: none;
     color: rgb(61, 61, 61);
 }
-.width-100{
+.width-100, .width2-100{
     width: 100%;
 }
 .reviews__text{
@@ -587,7 +571,7 @@ ul{
     display: flex;
     justify-content: space-between;
 }
-.float__r{
+.float__r, .float__res{
     float: right;
 }
 .question__bott .question__read{
@@ -944,14 +928,17 @@ a:hover .btn-read {
     background: rgb(209, 237, 235) !important;
 }
 @media (min-width: 993px) and (max-width: 1276px){
-    .container-simform-works2{
+    .container-simform-works2, .container-simform-works3{
         display: none;
     }
+    .container {
+        max-width: 1000px !important;
+        margin: 0 auto;
+    }
 }
-@media screen and (max-width:992px){
+@media screen and (min-width: 768px) and (max-width: 992px){
     .navbar-collapse{
         --bs-gutter-x: none !important;
-        background: black;
         margin-top: 22px;
         padding-left: 12px;
     }
@@ -960,9 +947,6 @@ a:hover .btn-read {
     }
     .banner__wid{
         width: 60% !important;
-    }
-    .content__header{
-        display: none;
     }
     .content{
         display: block;
@@ -984,11 +968,154 @@ a:hover .btn-read {
         text-align: center;
         line-height: 40px;
     }
-    .container-simform-works2{
+    .container-simform-works2, .container-simform-works3{
         display: none;
     }
     .container{
         max-width: 700px !important;
         margin: 0 auto;
+    }
+    .content-block p{
+        margin-bottom: 5px;
+    }
+    .all-heading h3 {
+        font-size: 35px;
+    }
+}
+
+@media screen and (min-width: 550px) and (max-width: 767px){
+    .navbar-collapse{
+        --bs-gutter-x: none !important;
+        margin-top: 22px;
+        padding-left: 12px;
+    }
+    .dis-flex{
+        display: block;
+    }
+    .banner__wid{
+        width: 60% !important;
+    }
+    .content{
+        display: block;
+    }
+    .content__right{
+        width: 100%;
+        text-align: center;
+    }
+    .width-100{
+        width: auto;
+    }
+    .firstfooter{
+        display: none;
+    }
+    .secondfooter ul li{
+        float: none;
+    }
+    .secondfooter{
+        text-align: center;
+        line-height: 40px;
+    }
+    .container-simform-works2, .container-simform-works3{
+        display: none;
+    }
+    
+    .content-block p{
+        margin-bottom: 5px;
+    }
+    .container{
+        max-width: 700px !important;
+        margin: 0 auto;
+    }
+    .all-heading h3 {
+        font-size: 35px;
+    }
+    .wi-30{
+        width: auto;
+    }
+    .display__resp{
+        display: flex;
+        gap: 15px;
+        align-items: center;
+    }
+    #bottom-footer .footer-list h5 {
+        margin-top: 10px;
+        padding-bottom: 0;
+    }
+    .content__threebox{
+        display: block;
+    }
+    .content__header{
+        padding: 30px;
+    }
+}
+
+@media screen and (max-width: 549px){
+    .navbar-collapse{
+        --bs-gutter-x: none !important;
+        margin-top: 22px;
+        padding-left: 12px;
+    }
+    .dis-flex{
+        display: block;
+    }
+    .banner__wid{
+        width: 60% !important;
+    }
+    .content{
+        display: block;
+    }
+    .content__right{
+        width: 100%;
+        text-align: center;
+    }
+    .width-100{
+        width: auto;
+    }
+    .firstfooter{
+        display: none;
+    }
+    .secondfooter ul li{
+        float: none;
+    }
+    .secondfooter{
+        text-align: center;
+        line-height: 40px;
+    }
+    .container-simform-works2, .container-simform-works3{
+        display: none;
+    }
+    
+    .content-block p{
+        margin-bottom: 5px;
+    }
+    .container{
+        max-width: 360px !important;
+        margin: 0 auto;
+    }
+    .content-block {
+        width: 100%;
+        padding: 12px 5px 5px 5px;
+    }
+    .all-heading h3 {
+        font-size: 35px;
+    }
+    .wi-30{
+        width: auto;
+    }
+    #bottom-footer .footer-list h5 {
+        margin-top: 10px;
+        padding-bottom: 0;
+    }
+    .float__r {
+        float: none;
+    }
+    .float__res{
+        float: left;
+    }
+    .content__threebox{
+        display: block;
+    }
+    .content__header{
+        padding: 30px;
     }
 }
